@@ -2,6 +2,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import BackGround from "@/components/BackGround";
+import Perfumes from "@/components/Perfumes";
 
 export default function Home() {
   const [toggle, setToggle] = useState(false);
@@ -15,7 +16,7 @@ export default function Home() {
       <BackGround />
       <div className="fixed top-0 left-0 p-4 z-10 w-full h-full min-h-screen flex justify-center items-center">
         <motion.div
-          className=" bg-[#000000e7] w-full h-full rounded-xl relative"
+          className=" bg-[#000000ef] w-full h-full rounded-xl relative"
           initial={{ y: "-100vh" }}
           animate={{ y: 0 }}
           transition={{
@@ -44,7 +45,7 @@ export default function Home() {
           <AnimatePresence>
             {toggle && (
               <motion.div
-                className="text-7xl font-light text-[#31ce73] absolute top-1/2 w-full text-center -translate-y-1/2"
+              className="h-full"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -53,7 +54,7 @@ export default function Home() {
                   delay: 2,
                 }}
               >
-                Listt Listt Listt
+                <Perfumes />
               </motion.div>
             )}
           </AnimatePresence>
